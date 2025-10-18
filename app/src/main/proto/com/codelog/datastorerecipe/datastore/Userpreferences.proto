@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_package = "com.codelog.datastorerecipe.datastore";
+option java_multiple_files = true;
+
+//User preferences
+message Userpreferences {
+
+  // Hour format
+ bool boolPref = 1;
+
+ string strField = 2;
+
+ int32 numField = 3;
+
+  // Contrast level
+  enum ContrastLevel {
+    MIN = 0;
+    MEDIUM = 1;
+    HARD  = 2;
+  }
+
+  ContrastLevel contrast_level = 4;
+
+}
